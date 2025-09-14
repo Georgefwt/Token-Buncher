@@ -1,6 +1,7 @@
 # 🛡️ Token Buncher: Shielding LLMs from Harmful Reinforcement Learning Fine-Tuning
 
 [![arXiv:2508.20697](https://img.shields.io/badge/arXiv-2508.20697-red.svg)](https://arxiv.org/abs/2508.20697)
+[![website](https://img.shields.io/website?url=https%3A%2F%2Ftokenbuncher.github.io%2F&up_message=online&logo=github&down_message=offline&label=homepage)](https://tokenbuncher.github.io/)
 
 
 ## 🛠️ Installation
@@ -214,6 +215,6 @@ python eval_wdmp_matchcases.py --questions_file ./dataset/wmdpbio-qwen/test.json
 
 ## 😊 Acknowledgement
 
-The `verl` folder in this repository is adapted from commit d843f95` of the verl project, we thank the authors for their great work.
+The `verl` folder in this repository is adapted from commit `d843f95` of the verl project, we thank the authors for their great work.
 
 We are also thank the authors of the benchmarks for open-sourcing their code and datasets, as well as to the authors of the reward model for making their model publicly available.

@@ -13,8 +13,8 @@ def extract_solution(solution_str):
         solution_str = solution_str.split("<|im_start|>assistant", 1)[1].split("<|im_end|>", 1)[0].split("<|im_start|>", 1)[0].split("<|endoftext|>", 1)[0]
     elif "<|start_header_id|>assistant<|end_header_id|>" in solution_str:
         solution_str = solution_str.split("<|start_header_id|>assistant<|end_header_id|>\n\n", 1)[1].split("<|eot_id|>", 1)[0]
-    elif " [/INST] " in solution_str:
-        solution_str = solution_str.split(" [/INST] ", 1)[1].split("</s>", 1)[0]
+    elif "[/INST]" in solution_str:
+        solution_str = solution_str.split("[/INST]", 1)[1].split("</s>", 1)[0]
     else:
         return None
     return solution_str
@@ -27,9 +27,9 @@ def extract_prompt(solution_str):
     elif "<|start_header_id|>assistant<|end_header_id|>" in solution_str:
         prompt_str = solution_str.split("<|start_header_id|>user<|end_header_id|>\n\n", 1)[1].split("<|eot_id|>", 1)[0]
         return prompt_str, "llama-3"
-    elif "<</SYS>>\n\n" in solution_str:
-        prompt_str = solution_str.split("<</SYS>>\n\n", 1)[1].split(" [/INST] ", 1)[0]
-        return prompt_str, "llama-2"
+    elif "<s>[INST]" in solution_str:
+        prompt_str = solution_str.split("<s>[INST]", 1)[1].split("[/INST]", 1)[0]
+        return prompt_str, "ministral"
     else:
         return None, ""
 

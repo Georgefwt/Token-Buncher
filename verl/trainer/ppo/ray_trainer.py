@@ -979,6 +979,15 @@ class RayPPOTrainer(object):
                         actor_output_metrics = reduce_metrics(actor_output.meta_info['metrics'])
                         metrics.update(actor_output_metrics)
 
+                    # validate
+                    if self.val_reward_fn is not None and self.config.trainer.test_freq > 0 and \
+                        (self.global_steps % self.config.trainer.test_freq == 0):
+                        with _timer('testing', timing_raw):
+                            val_metrics: dict = self._validate()
+                            if is_last_step:
+                                last_val_metrics = val_metrics
+                        metrics.update(val_metrics)
+
                     if self.config.trainer.save_freq > 0 and ( is_last_step or \
                             self.global_steps % self.config.trainer.save_freq == 0):
                         with _timer('save_checkpoint', timing_raw):
