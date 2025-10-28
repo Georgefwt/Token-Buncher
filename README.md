@@ -1,4 +1,7 @@
-# 🛡️ Token Buncher: Shielding LLMs from Harmful Reinforcement Learning Fine-Tuning
+<h1>
+  <img src="figure/logo.png" alt="Token Buncher Logo" width="80" style="vertical-align: middle;" />
+  Token Buncher: Shielding LLMs from Harmful Reinforcement Learning Fine-Tuning
+</h1>
 
 [![arXiv:2508.20697](https://img.shields.io/badge/arXiv-2508.20697-red.svg)](https://arxiv.org/abs/2508.20697)
 [![website](https://img.shields.io/website?url=https%3A%2F%2Ftokenbuncher.github.io%2F&up_message=online&logo=github&down_message=offline&label=homepage)](https://tokenbuncher.github.io/)
