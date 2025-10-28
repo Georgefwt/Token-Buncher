@@ -1,5 +1,7 @@
-<h1>
-  <img src="figure/logo.png" alt="Token Buncher Logo" width="80" style="vertical-align: middle;" />
+<p align="center">
+  <img src="figure/logo.png" alt="Token Buncher Logo" width="100" />
+</p>
+<h1 align="center">
   Token Buncher: Shielding LLMs from Harmful Reinforcement Learning Fine-Tuning
 </h1>
 
